@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 <p class="pokemon-id">#${pokemon.id.toString().padStart(3, '0')}</p>
                 <p class="pokemon-name">${pokemon.name.english}</p>
                 <p class="pokemon-type">
-                    ${pokemon.type.map(type => <span class="type ${type.toLowerCase()}">${type}</span>).join(' ')}
+                    ${pokemon.type.map(type => `<span class="type ${type.toLowerCase()}">${type}</span>`).join(' ')}
                 </p>
             </div>
             `;
