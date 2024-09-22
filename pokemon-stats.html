@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon Details</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="pokemon-details.js"></script>
+    <style>
+        /* General body styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        /* Card styling for the Pokémon details */
+        .card {
+            background-color: #fff;
+            border-radius: 5px; /* Smaller border-radius */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Lighter shadow */
+            width: 350px;
+            padding: 15px; /* Slightly less padding */
+            text-align: center;
+            margin: 20px;
+        }
+
+        .card img {
+            max-width: 150px;
+            margin-bottom: 20px;
+        }
+
+        .card h2 {
+            margin: 0;
+            font-size: 24px;
+            color: #333;
+        }
+
+        .card p {
+            font-size: 16px;
+            color: #555;
+            margin: 5px 0;
+        }
+
+        /* Stat bar container */
+        .stat-bar {
+            width: 100%;
+            height: 15px;
+            background-color: #e0e0e0;
+            border-radius: 5px;
+            overflow: hidden;
+            margin-top: 5px;
+            margin-bottom: 10px;
+        }
+
+        /* Filled part of the bar */
+        .stat-value {
+            height: 100%;
+            background-color: #4caf50;
+            border-radius: 5px;
+        }
+
+        /* Profile section styling */
+        .profile-info {
+            text-align: left;
+            margin-top: 20px;
+        }
+
+        .profile-info ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .profile-info li {
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="details-container" class="card"></div>
+</body>
+</html>
