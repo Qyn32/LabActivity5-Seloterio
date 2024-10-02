@@ -7,22 +7,23 @@ document.addEventListener("DOMContentLoaded", () => {
         return response.json();
     })
     .then(pokemonData => {
-        console.log(pokemonData); // Log to check if data is fetched correctly
-
         const container = document.querySelector(".container");
 
-        pokemonData.forEach(pokemon => {
-            console.log(pokemon); // Log each Pokémon object
+        pokemonData.forEach((pokemon, i) => {
+
+            if(i > 898) return // I-remove lang ni, gibutang ra koni para di mo laod tanan, para paspas
 
             const card = `
-            <div class="pokemon-card">
-                <img src="${pokemon.image_sprite}" alt="${pokemon.name.english}" />
-                <p class="pokemon-id">#${pokemon.id.toString().padStart(3, '0')}</p>
-                <p class="pokemon-name">${pokemon.name.english}</p>
-                <p class="pokemon-type">
-                    ${pokemon.type.map(type => `<span class="type ${type.toLowerCase()}">${type}</span>`).join(' ')}
-                </p>
-            </div>
+            <a href="pokemon-stats.html?pokemon=${pokemon.id}"
+                <div class="pokemon-card">
+                    <img src="${pokemon.image.thumbnail}" alt="${pokemon.name.english}" />
+                    <p class="pokemon-id">#${pokemon.id.toString().padStart(3, '0')}</p>
+                    <p class="pokemon-name">${pokemon.name.english}</p>
+                    <p class="pokemon-type">
+                        ${pokemon.type.map(type => `<span class="type ${type.toLowerCase()}">${type}</span>`).join(' ')}
+                    </p>
+                </div> 
+            </a>
             `;
 
             container.innerHTML += card;
